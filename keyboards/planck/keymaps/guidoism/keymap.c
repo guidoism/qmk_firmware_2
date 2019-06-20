@@ -5,7 +5,6 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
 				KC_LCTL, KC_A, KC_S, KC_D, KC_F, KC_G, KC_H, KC_J, KC_K, KC_L, KC_COLN, KC_ENT,
 				KC_LSFT, KC_Z, KC_X, KC_C, KC_V, KC_B, KC_N, KC_M, KC_COMM, KC_DOT, KC_SLSH, KC_SCLN,
 				MO(3), KC_ESC, KC_LALT, KC_LGUI, MO(1), KC_SPC, MO(2), MO(6), MO(7), MO(8), MO(5)),
-	
 	[1] = LAYOUT_planck_mit(KC_TILD, KC_EXLM, KC_AT, KC_HASH, KC_DLR, KC_PERC, KC_CIRC, KC_AMPR, KC_ASTR, KC_NO, KC_NO, KC_UNDO,
 				KC_TRNS, KC_NO, KC_CUT, KC_COPY, KC_PSTE, KC_NO, KC_NO, KC_UNDS, KC_PLUS, KC_DQUO, KC_QUOT, KC_PIPE,
 				KC_CAPS, KC_NO, KC__MUTE, KC__VOLDOWN, KC__VOLUP, KC_NO, KC_NO, KC_NO, KC_NO, KC_NO, KC_NO, KC_TRNS,
@@ -27,7 +26,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
 				KC_NO, KC_F17, KC_F18, KC_F19, KC_F20, KC_F21, KC_F22, KC_F23, KC_F24, KC_NO, KC_NO, KC_NO,
 				KC_NO, KC_NO, KC_NO, KC_NO, KC_NO, KC_NO, KC_NO, KC_NO, KC_NO, KC_NO, KC_TRNS),
 	[6] = LAYOUT_planck_mit(
-				KC_NO, 
+				KC_NO,
 				UC(0x3B8), // q -> θ
 				UC(0x3C9), // w -> ω
 				UC(0x3B5), // e -> ε
@@ -39,8 +38,8 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
 				UC(0x3BF), // o -> ο
 				UC(0x3C0), // p -> π
 				KC_TRNS,
-	
-				KC_NO, 
+
+			  KC_NO,
 				UC(0x3B1), // a -> α
 				UC(0x3C3), // s -> σ
 				UC(0x3B4), // d -> δ
@@ -52,7 +51,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
 				UC(0x3BB), // l -> λ
 				KC_TRNS,
 				KC_TRNS,
-				
+
 				KC_NO,
 				UC(0x3B6), // z -> ζ
 				UC(0x3BE), // x -> ξ
@@ -69,7 +68,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
 				KC_NO, KC_NO, KC_NO, KC_NO, KC_NO, KC_NO, KC_NO, KC_TRNS, KC_NO, KC_NO, KC_NO),
 
 	[7] = LAYOUT_planck_mit(
-				KC_NO, 
+				KC_NO,
 				UC(0x398), // Q -> Θ
 				UC(0x3A9), // W -> Ω
 				UC(0x395), // E -> Ε
@@ -82,7 +81,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
 				UC(0x3A0), // P -> Π
 				KC_TRNS,
 
-				KC_NO, 
+				KC_NO,
 				UC(0x391), // A -> Α
 				UC(0x3A3), // S -> Σ
 				UC(0x394), // D -> Δ
@@ -95,7 +94,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
 				KC_TRNS,
 				KC_TRNS,
 
-				KC_NO, 
+				KC_NO,
 				UC(0x396), // Z -> Ζ
 				UC(0x39E), // X -> Ξ
 				UC(0x3A7), // C -> Χ
@@ -112,7 +111,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
 
 
 	[8] = LAYOUT_planck_mit(
-				KC_NO, 
+				KC_NO,
 				UC(0x2227), // Q -> ∧
 				UC(0x2228), // W -> ∨
 				UC(0x22C2), // E -> ⋂
@@ -125,7 +124,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
 				UC(0x2202), // P -> ∂
 				KC_TRNS,
 
-				KC_NO, 
+				KC_NO,
 				UC(0x22A5), // A -> ⊥
 				UC(0x22A4), // S -> ⊤
 				UC(0x22A2), // D -> ⊢
@@ -138,7 +137,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
 				KC_TRNS,
 				KC_TRNS,
 
-				KC_NO, 
+				KC_NO,
 				UC(0x230A), // Z -> ⌊
 				UC(0x2308), // X -> ⌈
 				UC(0x2260), // C -> ≠
