@@ -3,8 +3,8 @@
 const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
 	[0] = LAYOUT_planck_mit(KC_TAB, KC_Q, KC_W, KC_E, KC_R, KC_T, KC_Y, KC_U, KC_I, KC_O, KC_P, KC_BSPC,
 				KC_LCTL, KC_A, KC_S, KC_D, KC_F, KC_G, KC_H, KC_J, KC_K, KC_L, KC_COLN, KC_ENT,
-				KC_LSFT, KC_Z, KC_X, KC_C, KC_V, KC_B, KC_N, KC_M, KC_COMM, KC_DOT, KC_SLSH, KC_SCLN,
-				MO(3), KC_ESC, KC_LALT, KC_LGUI, MO(1), KC_SPC, MO(2), MO(6), MO(7), MO(8), MO(5)),
+        KC_LSFT, KC_Z, KC_X, KC_C, KC_V, KC_B, KC_N, KC_M, KC_COMM, KC_DOT, KC_SLSH, RSFT_T(KC_SCLN),
+				MO(3), KC_ESC, KC_RALT, KC_LGUI, MO(1), KC_SPC, MO(2), KC_LALT, MO(6), MO(7), MO(5)),
 	[1] = LAYOUT_planck_mit(KC_TILD, KC_EXLM, KC_AT, KC_HASH, KC_DLR, KC_PERC, KC_CIRC, KC_AMPR, KC_ASTR, KC_NO, KC_NO, KC_UNDO,
 				KC_TRNS, KC_NO, KC_CUT, KC_COPY, KC_PSTE, KC_NO, KC_NO, KC_UNDS, KC_PLUS, KC_DQUO, KC_QUOT, KC_PIPE,
 				KC_CAPS, KC_NO, KC__MUTE, KC__VOLDOWN, KC__VOLUP, KC_NO, KC_NO, KC_NO, KC_NO, KC_NO, KC_NO, KC_TRNS,
@@ -109,7 +109,6 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
 
 				KC_NO, KC_NO, KC_NO, KC_NO, KC_NO, KC_NO, KC_NO, KC_TRNS, KC_NO, KC_NO, KC_NO),
 
-
 	[8] = LAYOUT_planck_mit(
 				KC_NO,
 				UC(0x2227), // Q -> ∧
@@ -154,7 +153,6 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
 
 
 	/*
-
 # From unicode.org
 2336 ⌶
 2337 ⌷
@@ -225,12 +223,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
 2378 ⍸
 2379 ⍹
 237A ⍺
-
-
 	 */
-
-
-	
 };
 
 void matrix_init_user(void) {
