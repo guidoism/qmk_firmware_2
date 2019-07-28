@@ -19,7 +19,7 @@
 
 // for memcpy
 #include <string.h>
-
+#include <print.h>
 
 #ifndef ENCODER_RESOLUTION
   #define ENCODER_RESOLUTION 4
@@ -70,9 +70,11 @@ void encoder_read(void) {
     encoder_state[i] |= (readPin(encoders_pad_a[i]) << 0) | (readPin(encoders_pad_b[i]) << 1);
     encoder_value[i] += encoder_LUT[encoder_state[i] & 0xF];
     if (encoder_value[i] >= ENCODER_RESOLUTION) {
+        dprintf("Encoder value(1): %d", encoder_value[i]);
         encoder_update_kb(i, false);
     }
     if (encoder_value[i] <= -ENCODER_RESOLUTION) { // direction is arbitrary here, but this clockwise
+        dprintf("Encoder value(2): %d", encoder_value[i]);
         encoder_update_kb(i, true);
     }
     encoder_value[i] %= ENCODER_RESOLUTION;
