@@ -499,12 +499,12 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] =
 
   // START LAYER
 	[9] = LAYOUT_planck_mit(KC_GRV,
-                          KC_P1,
-                          KC_P2,
-                          KC_P3,
-                          KC_P4,
-                          KC_P5,
-                          KC_P6,
+                          UC(0x2337), // ⌷
+                          UC(0x2338), // ⌸
+                          UC(0x2339), // ⌹
+                          UC(0x233A), // ⌺
+                          UC(0x233B), // ⌻
+                          UC(0x233C), // ⌼
                           KC_PSLS,
                           KC_PAST,
                           KC_PMNS,
@@ -523,12 +523,12 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] =
                           KC_P0,
                           KC_TRNS,
                           KC_TRNS,
-                          KC_P1,
-                          KC_P2,
-                          KC_P3,
-                          KC_P4,
-                          KC_P5,
-                          KC_P6,
+                          UC(0x233F), // ⌿
+                          UC(0x2340), // ⍀
+                          UC(0x2341), // ⍁
+                          UC(0x2342), // ⍂
+                          UC(0x2343), // ⍃
+                          UC(0x2344), // ⍄
                           KC_PDOT,
                           KC_PCMM,
                           KC_DLR,
@@ -550,20 +550,8 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] =
 	/*
 # From unicode.org
 2336 ⌶
-2337 ⌷
-2338 ⌸
-2339 ⌹
-233A ⌺
-233B ⌻
-233C ⌼
 233D ⌽
 233E ⌾
-233F ⌿
-2340 ⍀
-2341 ⍁
-2342 ⍂
-2343 ⍃
-2344 ⍄
 2345 ⍅
 2346 ⍆
 2347 ⍇
