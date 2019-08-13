@@ -547,65 +547,116 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] =
                           KC_TRNS),
   // END LAYER
 
+  // START LAYER
+	[10] = LAYOUT_planck_mit(
+				KC_NO,
+        UC(0x2336), // ⌶
+        UC(0x233D), // ⌽
+        UC(0x233E), // ⌾
+        UC(0x2345), // ⍅
+        UC(0x2346), // ⍆
+        UC(0x2347), // ⍇
+        UC(0x2348), // ⍈
+        UC(0x2349), // ⍉
+        UC(0x234A), // ⍊
+        UC(0x234B), // ⍋
+				KC_TRNS,
+
+				KC_NO,
+        UC(0x234C), // ⍌
+        UC(0x234D), // ⍍
+        UC(0x234E), // ⍎
+        UC(0x234F), // ⍏
+        UC(0x2350), // ⍐
+        UC(0x2351), // ⍑
+        UC(0x2352), // ⍒
+        UC(0x2353), // ⍓
+        UC(0x2354), // ⍔
+        UC(0x2355), // ⍕
+				KC_TRNS,
+
+				KC_NO,
+        UC(0x2356), // ⍖
+        UC(0x2357), // ⍗
+        UC(0x2358), // ⍘
+        UC(0x2359), // ⍙
+        UC(0x235A), // ⍚
+        UC(0x235B), // ⍛
+        UC(0x235C), // ⍜
+        UC(0x235D), // ⍝
+        UC(0x235E), // ⍞
+        UC(0x235F), // ⍟
+				KC_TRNS,
+
+				KC_NO,
+        KC_NO,
+        KC_NO,
+        KC_NO,
+        KC_NO,
+        KC_NO,
+        KC_NO,
+        KC_TRNS,
+        KC_NO,
+        KC_NO,
+        KC_NO),
+  // END LAYER
+
+  // START LAYER
+	[11] = LAYOUT_planck_mit(
+				KC_NO,
+        UC(0x2360), // ⍠
+        UC(0x2361), // ⍡
+        UC(0x2362), // ⍢
+        UC(0x2363), // ⍣
+        UC(0x2364), // ⍤
+        UC(0x2365), // ⍥
+        UC(0x2366), // ⍦
+        UC(0x2367), // ⍧
+        UC(0x2368), // ⍨
+        UC(0x2369), // ⍩
+				KC_TRNS,
+
+				KC_NO,
+        UC(0x236A), // ⍪
+        UC(0x236B), // ⍫
+        UC(0x236C), // ⍬
+        UC(0x236D), // ⍭
+        UC(0x236E), // ⍮
+        UC(0x236F), // ⍯
+        UC(0x2370), // ⍰
+        UC(0x2371), // ⍱
+        UC(0x2372), // ⍲
+        UC(0x2373), // ⍳
+				KC_TRNS,
+
+				KC_NO,
+        UC(0x2374), // ⍴
+        UC(0x2375), // ⍵
+        UC(0x2376), // ⍶
+        UC(0x2377), // ⍷
+        UC(0x2378), // ⍸
+        UC(0x2379), // ⍹
+        UC(0x237A), // ⍺
+				KC_TRNS,
+				KC_TRNS,
+				KC_TRNS,
+				KC_TRNS,
+
+				KC_NO,
+        KC_NO,
+        KC_NO,
+        KC_NO,
+        KC_NO,
+        KC_NO,
+        KC_NO,
+        KC_TRNS,
+        KC_NO,
+        KC_NO,
+        KC_NO),
+  // END LAYER
+
 	/*
 # From unicode.org
-2336 ⌶
-233D ⌽
-233E ⌾
-2345 ⍅
-2346 ⍆
-2347 ⍇
-2348 ⍈
-2349 ⍉
-234A ⍊
-234B ⍋
-234C ⍌
-234D ⍍
-234E ⍎
-234F ⍏
-2350 ⍐
-2351 ⍑
-2352 ⍒
-2353 ⍓
-2354 ⍔
-2355 ⍕
-2356 ⍖
-2357 ⍗
-2358 ⍘
-2359 ⍙
-235A ⍚
-235B ⍛
-235C ⍜
-235D ⍝
-235E ⍞
-235F ⍟
-2360 ⍠
-2361 ⍡
-2362 ⍢
-2363 ⍣
-2364 ⍤
-2365 ⍥
-2366 ⍦
-2367 ⍧
-2368 ⍨
-2369 ⍩
-236A ⍪
-236B ⍫
-236C ⍬
-236D ⍭
-236E ⍮
-236F ⍯
-2370 ⍰
-2371 ⍱
-2372 ⍲
-2373 ⍳
-2374 ⍴
-2375 ⍵
-2376 ⍶
-2377 ⍷
-2378 ⍸
-2379 ⍹
-237A ⍺
 	 */
 };
 
