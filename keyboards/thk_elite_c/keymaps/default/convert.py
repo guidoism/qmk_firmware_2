@@ -1,8 +1,9 @@
 import re
 
-r = re.compile(r'\{([^\}]+)\}', m.DOTALL)
+r = re.compile(r'{([^}]+)}', re.DOTALL)
+m = r.search(open('keymap.c').read())
+s = m.group(1)
 
-#m = re.match(r'\{([^\}]+)\}', open('keymap.c').read())
-m = r.match(open('keymap.c').read())
-print(m.groups())
+
+
 
