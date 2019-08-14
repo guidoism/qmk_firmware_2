@@ -46,10 +46,8 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 #define UNUSED_PINS
 
 #define MEDIA_KEY_DELAY 10
-//#define NUMBER_OF_ENCODERS 1
 //#define ENCODERS_PAD_B { F4 }
 //#define ENCODERS_PAD_A { B0 }
-#define NUMBER_OF_ENCODERS 2
 #define ENCODERS_PAD_A { F4, F7 }
 #define ENCODERS_PAD_B { B0, F5 }
 #define ENCODER_RESOLUTION 4
