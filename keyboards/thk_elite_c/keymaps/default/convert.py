@@ -1,6 +1,5 @@
 import re, json
 
-
 # Remove comments
 #r = re.compile(r'\/\/.*')
 #r = re.compile(r'\/\/[^\n]*')
@@ -37,24 +36,27 @@ keyboard = {
 }
 json.dump(keyboard, open('keymap.json', 'w'))
 
-keys = json.load(open('labels.json'))
+labels = json.load(open('labels.json'))
 
 from colorama import Fore, Back, Style
 from more_itertools import chunked
 import unicodedata
 import ftfy
 from ftfy.formatting import display_center as center, monospaced_width
+from collections import defaultdict
+from copy import copy
+
+previous = defaultdict(lambda: defaultdict(str))
 
 def layer_key(i):
     return chr(0x2460 + i)
 
 def color(s):
-    #return Fore.RED + Back.GREEN + s + Style.RESET_ALL
     return Fore.GREEN + s + Style.RESET_ALL
 
 def label(k):
-    if k in keys:
-        return keys[k]
+    if k in labels:
+        return labels[k]
     # UC(0x236A)
     m = re.match(r'UC\(0x(\S+)\)', k)
     if m:
@@ -63,40 +65,37 @@ def label(k):
     m = re.match(r'MO\((\d+)\)', k)
     if m:
         return layer_key(int(m.group(1)))
+    m = re.match(r'TO\((\d+)\)', k)
+    if m:
+        return layer_key(int(m.group(1)))
     m = re.match(r'TT\((\d+)\)', k)
     if m:
         return layer_key(int(m.group(1)))
+    #if k == 'KC_TRNS':
+    #    return Style.DIM + previous[i][j]
+    print(k)
     return ' '
 
 def info(k):
     #print(monospaced_width(k))
     return k
 
-for i, layer in enumerate(layers):
-    print(f'Layer {i}')
-    '┌', '┐'
-    print('┌─' + '──┬─'*11 + '──┐')
+for num, layer in enumerate(layers):
     keys = list(chunked([color(center(info(label(k)), 3)) for k in layer], 12))
+    for i, a in enumerate(keys):
+        #print(a)
+        for j, b in enumerate(a):
+            #print(i, j, b)
+            previous[i][j] = b
+
+    print('┌─' + '──┬─'*11 + '──┐')
     print('│' + '│'.join(keys[0]) + '│')
     print('├─' + '──┼─'*11 + '──┤')
     print('│' + '│'.join(keys[1]) + '│')
-    print('├─' + '──┼─'*11 + '──┤')
+    print('├─' + '──┼─'*11 + f'──┤ Layer {num}')
     print('│' + '│'.join(keys[2]) + '│')
-    print('├─' + '──┼─'*11 + '──┤')
+    print('├───┼───┼───┼───┼───┼───┴───┼───┼───┼───┼───┼───┤')
+    keys[3][5] = '       '
     print('│' + '│'.join(keys[3]) + '│')
-    print('└─' + '──┴─'*11 + '──┘')
-    quit()
+    print('└───┴───┴───┴───┴───┴───────┴───┴───┴───┴───┴───┘')
 
-
-
-
-#    {
-#  "keyboard": "planck/rev5",
-#  "keymap": "planck_rev5_layout_ortho_4x12_mine",
-#  "layout": "LAYOUT_planck_1x2uC",
-#  "layers": [
-#         ["KC_TAB",
-#  ],
-#  "author": "Guido Bartolucci",
-#  "notes": ""
-#}
