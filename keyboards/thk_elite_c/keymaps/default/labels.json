@@ -156,7 +156,7 @@
   "KC_MENU": "Menu",
   "KC_SELECT": "Select",
   "KC_AGAIN": "Again",
-  "KC_UNDO": "Undo",
+  "KC_UNDO": "",
   "KC_CUT": "",
   "KC_COPY": "",
   "KC_PASTE": "",
